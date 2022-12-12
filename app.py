@@ -9,6 +9,7 @@ Example:
 import sys
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -61,6 +62,14 @@ def get_applicant_info():
     return credit_score, debt, income, loan_amount, home_value
 
 def save_csv(filepath,qualifying_loans):
+    """Writes the qualifying loans to a csv file
+    Args:
+        filepath(string): Determines where the csv file will be saved
+        qualifying_loans(list of lists): Provides the data to be saved in a list of lists format.
+    
+    """
+    
+    #Will set the header for the csv file
     header=['Lender','Max_Loan_Amount','Max_LTV,Max_DTI','Min_Credit_Score','Interest_Rate']
     #Using csv to write a file
     csvfile=open(filepath,'w',newline='')
@@ -73,7 +82,7 @@ def save_csv(filepath,qualifying_loans):
         csvwriter.writerow(bank)
 
 def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_value):
-    """Determine which loans the user qualifies for.
+    """Determine which loans the user qualifies for and saves them to a csv file.
 
     Loan qualification criteria is based on:
         - Credit Score
