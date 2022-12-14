@@ -68,17 +68,19 @@ def save_csv(filepath,qualifying_loans):
         qualifying_loans(list of lists): Provides the data to be saved in a list of lists format.
     
     """
-    
-    #Will set the header for the csv file
-    header=['Lender','Max_Loan_Amount','Max_LTV,Max_DTI','Min_Credit_Score','Interest_Rate']
-    #Using csv to write a file
-    csvfile=open(filepath,'w',newline='')
-    #Prepare the writer with the correct filepath
-    csvwriter=csv.writer(csvfile)
-    # Writing header:
-    csvwriter.writerow(header)
-    #writing data rows:
-    for bank in qualifying_loans:
+    if qualifying_loans==0:
+        print("There are no qualifying loans to save.")
+    else:
+        #Will set the header for the csv file
+        header=['Lender','Max_Loan_Amount','Max_LTV,Max_DTI','Min_Credit_Score','Interest_Rate']
+        #Using csv to write a file
+        csvfile=open(filepath,'w',newline='')
+        #Prepare the writer with the correct filepath
+        csvwriter=csv.writer(csvfile)
+        # Writing header:
+        csvwriter.writerow(header)
+        #writing data rows:
+        for bank in qualifying_loans:
         csvwriter.writerow(bank)
 
 def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_value):
