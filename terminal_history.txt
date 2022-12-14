@@ -1,0 +1,50 @@
+  476  git commit -m "Initial commit"
+  477  git status
+  478  git add app.py
+  479  git commit -m "Added a function to save qualifying loans to a csv"
+  480  git status
+  481  git add app.py
+  482  git commit -m "Integrated the save function into the function to find qualifying loans"
+  483  git push
+  484  git status
+  485  git status
+  486  git add app.py
+  487  git commit -m "Added documentation to the docstrings of the previously changed functions"
+  488  git push
+  489  git status
+  490  python app.py
+  491  python app.py
+  492  winpty app.py
+  493  winpty python app.py
+  494  git status
+  495  git add app.py
+  496  git commit -m "Added a function to prompt CLI user for information if saving qualifying loans"
+  497  git push
+  498  history 50> terminal history.txt
+  499  history 50 > terminal_history.txt
+  500  jupyter lab
+  501  conda activate dev
+  502  ls
+  503  cd Loan_Qualifier_app/
+  504  python --version
+  505  pip --version
+  506  fire --version
+  507  pip fire --version
+  508  pip install fire
+  509  python app.py
+  510  winpty python app.py
+  511  winpty python app.py
+  512  history50>terminal_history.txt
+  513  git status
+  514  git status
+  515  git add README.md
+  516  git add images/
+  517  git status
+  518  git commit -m "Updated readme and included image files for the readme."
+  519  git push
+  520  history 50 > terminal_history.txt
+  521  git add app.py
+  522  git commit -m "Added a message for when the user attempts to save an empty list of qualifying loans."
+  523  git push
+  524  git status
+  525  history 50 > terminal_history.txt
