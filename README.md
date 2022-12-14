@@ -1,33 +1,51 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This project allows a user to quickly filter through a list of loans and find the ones they would be approved for. It will request an input of user information to output a csv file listing the approved loans.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This program runs on python 3.10.9 and requires pip 22.3.1 to be installed.
+Python fire must be installed on the command line interface (CLI).
+Libraries: sys, fire, questionary, csv, and pathlib.
+For windows operating systems running the git bash program.
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Install the latest version of python and git bash.
+Install python fire by running the following code on the CLI:
+'pip install fire'
+Navigate to the Loan_Qualifier_app folder using the terminal.
+The program should now be ready to run!
+**Note:** To run this program type 'winpty python app.py' into the git bash terminal after navigating to the correct folder.
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To run this program from the CLI:
+Type 'winpty python app.py'
+Enter the filepath to the rate sheet you would like to search through. By default this will be *data/daily_rate_sheet.csv*
+Enter the user information requested and the number of qualifying loans will be displayed:
+![A screenshot of the terminal that shows user the preceding lines of code as well as a request for credit score, monthly debt, monthly income, loan amount and home value](images/loans_terminal.PNG)
+
+Type Y to save the list of loans to a csv file. Otherwise, type N.
+If you decided to save the list of loans, type the file path to where you would like to save the csv file.
+The qualifying loans will be saved in the following format:
+![A csv file containing a list of qualified loans](images/csv_file.PNG)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+By Brian Wander
+brianwander101@gmail.com
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+Free to use with proper attribution.
